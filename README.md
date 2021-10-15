@@ -4,7 +4,7 @@
     phase_lam1 = double( imread( [ root filesep 'phase2phase' filesep 'phantom_phase_505nm_' num2str( frames( ii ) ) '.tif' ] ) )*1e-6;
     phase_lam2 = double( imread( [ root filesep 'phase2phase' filesep 'phantom_phase_488nm_' num2str( frames( ii ) ) '.tif' ] ) )*1e-6;
     
-    # read predicted phase at wavelength 2 in matlab (first execute pix2pix)
+    # read predicted phase at wavelength 2 in matlab (first execute pix2pix in https://github.com/bazowbs1/cgan-mw-decoupling)
     phase_lam2_predict = double( imread( [ root filesep 'predict_' num2str( nEpochs ) '_epochs' filesep num2str( frames( ii ) ) '_predict.tif' ] ) );
     
     # read true refractive index and height in matlab
